@@ -7,7 +7,7 @@ async function main() {
   await lock.depolyed();
 
   console.log(
-    `Lock with 1 ETH and unlock timestamp ${unlockTime} deployed to ${lock.address}`
+    `Address of contract ${unlockTime} deployed to ${lock.address}`
   );
 }
 
