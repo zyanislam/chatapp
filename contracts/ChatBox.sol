@@ -67,5 +67,16 @@ contract ChatBox {
     function checkAlreadyFriends(
         address pubkey1,
         address pubkey2
-    ) internal view returns (bool) {}
+    ) internal view returns (bool) {
+        if (
+            userList[pubkey1].friendList.length >
+            userList[pubkey2].friendList.length
+        ) {
+            address tmp = pubkey1;
+            pubkey1 = pubkey2;
+            pubkey2 = tmp;
+        }
+        for(uint256 i = 0; i < userList[pubkey1].friendList.length; i++) {
+            if (userList[pubkey1].friendList[i].p
+    }
 }
