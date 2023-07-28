@@ -38,8 +38,34 @@ contract ChatBox {
     function getUsername(address pubkey) external view returns (string memory) {
         require(
             checkUserExists(pubkey),
-            "The user is not registered! Please Sign-Up first"
+            "The user is not registered! Please Sign-Up first."
         );
         return userList[pubkey].name;
     }
+
+    // Add Friends
+    function addFriend(address friend_key, string calldata name) external {
+        require(checkUserExists(msg.sender), "Please Sign-Up first.");
+        require(
+            checkUserExists(friend_key),
+            "Sorry! This user does not exist! Please try again."
+        );
+        require(
+            msg.sender != friend_key,
+            "You can't add yourself as a friend!"
+        );
+        require(
+            checkAlreadyFriends(msg.sender, friend_key) == false,
+            "The user is already your friend!"
+        );
+
+        _addFriend(msg.sender, friend_key, name);
+        _addFriend(friend_key, msg.sender, userList[msg.sender].name);
+    }
+
+    // Check if the user is already your friend
+    function checkAlreadyFriends(
+        address pubkey1,
+        address pubkey2
+    ) internal view returns (bool) {}
 }
