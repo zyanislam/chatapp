@@ -20,5 +20,10 @@ contract ChatBox {
     }
 
     mapping(address => user) userList;
-    mapping(bytes => user) userList;
+    mapping(bytes32 => message) allMessages;
+
+    // Authenticate User
+    function checkUserExist(address pubkey) public view returns (bool) {
+        return bytes(userList[pubkey].name).length > 0;
+    }
 }
