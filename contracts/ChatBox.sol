@@ -8,7 +8,6 @@ contract ChatBox {
         string name;
         friend[] friendList;
     }
-
     struct friend {
         address pubkey;
         string name;
@@ -16,14 +15,20 @@ contract ChatBox {
     struct message {
         address sender;
         uint256 timestamp;
-        string message;
+        string msg;
     }
 
     mapping(address => user) userList;
-    mapping(bytes32 => message) allMessages;
+    mapping(bytes32 => message[]) allMessages;
+
+    // Create User
+    function createUser(string calldata name) external {
+        require(checkUserExists(msg.sender) == false, "User Exists");
+        require(bytes(name).length > 0, "The username cannot be empty!");
+    }
 
     // Authenticate User
-    function checkUserExist(address pubkey) public view returns (bool) {
+    function checkUserExists(address pubkey) public view returns (bool) {
         return bytes(userList[pubkey].name).length > 0;
     }
 }
