@@ -92,4 +92,21 @@ contract ChatBox {
         friend memory newFriend = friend(friend_key, name);
         userList[me].friendList.push(newFriend);
     }
+
+    //List of my friends
+
+    function listOfMyFriends() external view returns (friend[] memory) {
+        return userList[msg.sender].friendList;
+    }
+
+    function _getChatCode(
+        address pubkey1,
+        address pubkey2
+    ) internal pure returns (bytes32) {
+        if (pubkey1 < pubkey2) {
+            return keccak256(abi.encodePacked(pubkey1, pubkey2));
+        } else return keccak256(abi.encodePacked(pubkey2, pubkey1));
+    }
+
+    //Message Sent Function
 }
