@@ -1,7 +1,5 @@
 # Blockchain-Based Chat Application using Hardhat
 
-![Project Logo](link-to-your-logo.png) *(if you have one)*
-
 This is a decentralized chat application built on the Ethereum blockchain using Hardhat, a development environment for Ethereum smart contracts. The application allows users to communicate with each other in a secure and private manner, leveraging the transparency and immutability of blockchain technology.
 
 ## Features
