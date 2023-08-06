@@ -18,15 +18,23 @@ contract ChatBox {
         string msg;
     }
 
+    struct allUsersList {
+        string name;
+        address acccountAddress;
+    }
+
+    allUsersList[] getAllUsers;
+
     mapping(address => user) userList;
     mapping(bytes32 => message[]) allMessages;
 
-    // Create User
+    // Create User in ChatApp
     function createUser(string calldata name) external {
         require(checkUserExists(msg.sender) == false, "User Exists");
         require(bytes(name).length > 0, "The username cannot be empty!");
 
         userList[msg.sender].name = name;
+        getAllUsers.push(allUsersList(name, msg.sender));
     }
 
     // Authenticate User
@@ -43,7 +51,7 @@ contract ChatBox {
         return userList[pubkey].name;
     }
 
-    // Add Friends
+    // Add Friends in ChatApp
     function addFriend(address friend_key, string calldata name) external {
         require(checkUserExists(msg.sender), "Please Sign-Up first.");
         require(
@@ -77,9 +85,7 @@ contract ChatBox {
             pubkey2 = tmp;
         }
         for (uint256 i = 0; i < userList[pubkey1].friendList.length; i++) {
-            if (userList[pubkey1].friendList[i].pubkey = pubkey2) {
-                return true;
-            }
+            if (userList[pubkey1].friendList[i].pubkey == pubkey2) return true;
         }
         return false;
     }
@@ -93,8 +99,7 @@ contract ChatBox {
         userList[me].friendList.push(newFriend);
     }
 
-    //List of my friends
-
+    // List of my friends
     function listOfMyFriends() external view returns (friend[] memory) {
         return userList[msg.sender].friendList;
     }
@@ -108,5 +113,36 @@ contract ChatBox {
         } else return keccak256(abi.encodePacked(pubkey2, pubkey1));
     }
 
-    //Message Sent Function
+    // Sent Message Function
+    function sendMessage(address friend_key, string calldata _msg) external {
+        require(
+            checkUserExists(msg.sender),
+            "Create an account first to send a message."
+        );
+        require(
+            checkUserExists(friend_key),
+            "User not registered! Please Sign-Up first."
+        );
+        require(
+            checkAlreadyFriends(msg.sender, friend_key),
+            "You are not friends with the given user yet!"
+        );
+
+        bytes32 chatCode = _getChatCode(msg.sender, friend_key);
+        message memory newMsg = message(msg.sender, block.timestamp, _msg);
+        allMessages[chatCode].push(newMsg);
+    }
+
+    // Read Message Function
+    function readMessage(
+        address friend_key
+    ) external view returns (message[] memory) {
+        bytes32 chatCode = _getChatCode(msg.sender, friend_key);
+        return allMessages[chatCode];
+    }
+
+    // Get All Users in the ChatApp
+    function getAllChatAppUsers() public view returns (allUsersList[] memory) {
+        return getAllUsers;
+    }
 }
