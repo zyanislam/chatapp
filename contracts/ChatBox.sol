@@ -77,9 +77,7 @@ contract ChatBox {
             pubkey2 = tmp;
         }
         for (uint256 i = 0; i < userList[pubkey1].friendList.length; i++) {
-            if (userList[pubkey1].friendList[i].pubkey = pubkey2) {
-                return true;
-            }
+            if (userList[pubkey1].friendList[i].pubkey == pubkey2) return true;
         }
         return false;
     }
@@ -126,5 +124,12 @@ contract ChatBox {
         bytes32 chatCode = _getChatCode(msg.sender, friend_key);
         message memory newMsg = message(msg.sender, block.timestamp, _msg);
         allMessages[chatCode].push(newMsg);
+    }
+
+    function readMessage(
+        address friend_key
+    ) external view returns (message[] memory) {
+        bytes32 chatCode = _getChatCode(msg.sender, friend_key);
+        return allMessages[chatCode];
     }
 }
