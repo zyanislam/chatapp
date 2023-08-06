@@ -109,4 +109,11 @@ contract ChatBox {
     }
 
     //Message Sent Function
+    fucntion sendMessage(address friend_key, string calldata _msg) external{
+        require(checkUserExists(msg.sender), "Create an account first to send a message.");
+        require(checkUserExists(friend_key), "User not registered! Please Sign-Up first.");
+        require(checkAlreadyFriends(msg.sender, friend_key), "You are not friends with the given user yet!");
+
+        bytes32()
+    }
 }
