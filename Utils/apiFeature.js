@@ -2,6 +2,8 @@ import { ethers } from "ethers";
 import Web3Modal from "web3modal";
 import { ChatAppAddress, ChatAppABI } from "../Context/constants";
 
+
+// Checks whether the user's Wallet is connected or not
 export const CheckIfWalletIsConnected = async () => {
     try {
         if (!window.ethereum) return console.log("First Install MetaMask");
@@ -15,7 +17,8 @@ export const CheckIfWalletIsConnected = async () => {
         console.log(error);
     }
 };
- 
+
+// Connects the user's Ethereum Wallet
 export const ConnectMyWallet = async () => { 
     try {
         if (!window.ethereum) return console.log("First Install MetaMask");
