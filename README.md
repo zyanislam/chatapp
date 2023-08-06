@@ -26,12 +26,12 @@ Follow these instructions to set up and run the chat application locally on your
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/your-username/your-chat-app.git
+   git clone https://github.com/zyanislam/chatapp.git
    ```
 
 2. Change into the project directory:
    ```bash
-   cd your-chat-app
+   cd chatapp
    ```
 
 3. Install the dependencies:
@@ -81,10 +81,6 @@ npx hardhat test
 
 Contributions to this project are welcome! If you find any issues or want to add new features, please open an issue or submit a pull request.
 
-## License
-
-This project is licensed under the [MIT License](LICENSE).
-
 ## Acknowledgments
 
 - Hat tip to anyone whose code was used
@@ -92,8 +88,5 @@ This project is licensed under the [MIT License](LICENSE).
 - etc.
 
 ---
-
-*Note: Replace the placeholders like `your-username`, `your-chat-app`, and `link-to-your-logo.png` with your actual information.*
-
 
 **Important:** This project is intended for educational and demonstration purposes only. Do not use real funds or sensitive information in this development environment.
