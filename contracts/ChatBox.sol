@@ -76,7 +76,20 @@ contract ChatBox {
             pubkey1 = pubkey2;
             pubkey2 = tmp;
         }
-        for(uint256 i = 0; i < userList[pubkey1].friendList.length; i++) {
-            if (userList[pubkey1].friendList[i].p
+        for (uint256 i = 0; i < userList[pubkey1].friendList.length; i++) {
+            if (userList[pubkey1].friendList[i].pubkey = pubkey2) {
+                return true;
+            }
+        }
+        return false;
+    }
+
+    function _addFriend(
+        address me,
+        address friend_key,
+        string memory name
+    ) internal {
+        friend memory newFriend = friend(friend_key, name);
+        userList[me].friendList.push(newFriend);
     }
 }
