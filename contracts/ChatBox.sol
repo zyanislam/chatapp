@@ -141,6 +141,7 @@ contract ChatBox {
         return allMessages[chatCode];
     }
 
+    // Get All Users in the ChatApp
     function getAllChatAppUsers() public view returns (allUsersList[] memory) {
         return getAllUsers;
     }
