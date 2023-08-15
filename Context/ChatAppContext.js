@@ -18,6 +18,24 @@ export const ProviderApp = ({ children }) => {
     const [currentUsername, setCurrentUsername] = useState("");
     const [currentUsernameAddress, setCurrentUsernameAddress] = useState("");
 
+    const router = useRouter();
+
+    //Date Time of Page Loading
+    const fetchData = async () => {
+        try {
+            // Get the contract
+            const contract = await ConnectingWithContract();
+            // Get the account
+            const account = await ConnectMyWallet();
+            setAccount(account);
+            // Get the user name
+            const userName = await contract.getUserName(account)
+        } catch (error) {
+            setError("Please Install & Connect Your Wallet!");
+        }
+     }
+
+
     return (
         <ContextApp.Provider value={{ }}>
             {children}
