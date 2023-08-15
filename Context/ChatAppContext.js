@@ -25,11 +25,19 @@ export const ProviderApp = ({ children }) => {
         try {
             // Get the contract
             const contract = await ConnectingWithContract();
+
             // Get the account
             const account = await ConnectMyWallet();
             setAccount(account);
+
             // Get the user name
             const userName = await contract.getUserName(account)
+            setUsername(userName);
+
+            // Get my friend list
+            const friendList = await contract.listOfMyFriends()
+            setFriendList(friendList);
+            
         } catch (error) {
             setError("Please Install & Connect Your Wallet!");
         }
