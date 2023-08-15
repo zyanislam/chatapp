@@ -62,7 +62,7 @@ export const ProviderApp = ({ children }) => {
     };
 
     // Create Account
-    const createAccount = async ({ name, accountAddress }) => { 
+    const createAccount = async ({ name, accountAddress }) => {
         try {
             if (name || accountAddress) return setError("Name & Account Address cannot be empty!")
             const contract = await ConnectingWithContract();
@@ -74,9 +74,29 @@ export const ProviderApp = ({ children }) => {
         } catch (error) {
             setError("ERROR!! Please create your account first!");
         }
-    }
+    };
+
+    // Add your friends
+    const addFriends = async ({name, accountAddress}) => {
+        try {
+            if (name || accountAddress) return setError("Please provide the Name & Friend Address");
+
+            const contract = await ConnectingWithContract();
+            const addMyFriend = await contract.addFriend(accountAddress, name);
+            setLoading(true);
+            await addMyFriend.wait();
+            setLoading(false);
+            router.push("/");
+            window.location.reload();
+        } catch (error) {
+            setError("Something went wrong when you tried to add friends!! Try again.");
+        }
+    };
+
+    //
+
     return (
-        <ContextApp.Provider value={{ readMessage, createAccount }}>
+        <ContextApp.Provider value={{ readMessage, createAccount, addFriends }}>
             {children}
         </ContextApp.Provider>
     )
