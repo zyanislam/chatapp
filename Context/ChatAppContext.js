@@ -37,15 +37,46 @@ export const ProviderApp = ({ children }) => {
             // Get my friend list
             const friendList = await contract.listOfMyFriends()
             setFriendList(friendList);
-            
+
+            // Get all users list
+            const userList = await contract.getAllChatAppUsers()
+            setFriendList(userList);
+
         } catch (error) {
             setError("Please Install & Connect Your Wallet!");
         }
-     }
+    };
+    useEffect(() => {
+        fetchData();
+    }, []);
 
+    // Read Messages
+    const readMessage = async (friendAddress) => {
+        try {
+            const contract = await ConnectingWithContract();
+            const read = await contract.readMessage(friendAddress);
+            setFriendMsg(read);
+        } catch (error) {
+            setError("Currently you have no messages to read")
+        }
+    };
 
+    // Create Account
+    const createAccount = async ({ name, accountAddress }) => { 
+        try {
+            if (name || accountAddress) return setError("Name & Account Address cannot be empty!")
+            const contract = await ConnectingWithContract();
+            const getCreatedUser = await contract.createAccount(name);
+            setLoading(true);
+            await getCreatedUser.wait();
+            setLoading(false);
+            window.location.reload();
+        } catch (error) {
+            setError("ERROR!! Please create your account first!");
+        }
+    }
     return (
-        <ContextApp.Provider value={{ }}>
+        <ContextApp.Provider value={{ readMessage, createAccount }}>
             {children}
         </ContextApp.Provider>
     )
