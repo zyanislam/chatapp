@@ -1,8 +1,12 @@
-import './styles/globals.css'
+import { ProviderApp } from "../Context/ChatAppContext";
+import { NavBar } from "../Components/index";
 
 const MyApp = ({ Component, pageProps }) => (
     <div>
-        <Component {...pageProps} />
+        <ProviderApp>
+            <NavBar/>
+            <Component {...pageProps} />
+        </ProviderApp>
     </div>
 );
 
