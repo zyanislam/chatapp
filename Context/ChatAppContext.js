@@ -7,6 +7,17 @@ export const ContextApp = React.createContext();
 
 export const ProviderApp = ({ children }) => {
     const [account, setAccount] = useState("");
+    const [userName, setUserName] = useState("");
+    const [friendList, setFriendList] = useState("");
+    const [friendMsg, setFriendMsg] = useState("");
+    const [loading, setLoading] = useState(false);
+    const [userLists, setUserLists] = useState("");
+    const [error, setError] = useState("");
+
+    //User Data
+    const [currentUsername, setCurrentUsername] = useState("");
+    const [currentUsernameAddress, setCurrentUsernameAddress] = useState("");
+
     return (
         <ContextApp.Provider value={{ }}>
             {children}
