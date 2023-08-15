@@ -83,14 +83,20 @@ export const ProviderApp = ({ children }) => {
 
             const contract = await ConnectingWithContract();
             const addMyFriend = await contract.addFriend(accountAddress, name);
-            
+            setLoading(true);
+            await addMyFriend.wait();
+            setLoading(false);
+            router.push("/");
+            window.location.reload();
         } catch (error) {
             setError("Something went wrong when you tried to add friends!! Try again.");
         }
     };
 
+    //
+
     return (
-        <ContextApp.Provider value={{ readMessage, createAccount }}>
+        <ContextApp.Provider value={{ readMessage, createAccount, addFriends }}>
             {children}
         </ContextApp.Provider>
     )
