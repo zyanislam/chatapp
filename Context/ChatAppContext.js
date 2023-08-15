@@ -3,8 +3,13 @@ import { useRouter } from 'next/router'
 
 import { CheckIfWalletIsConnected, ConnectMyWallet, ConnectingWithContract, timeConversion } from "../Utils/apiFeature.js"
 
-export const Context = React.createContext();
+export const ContextApp = React.createContext();
 
-export const Provider = ({ children }) => {
-    const title = "Hey"
+export const ProviderApp = ({ children }) => {
+    const [account, setAccount] = useState("");
+    return (
+        <ContextApp.Provider value={{ }}>
+            {children}
+        </ContextApp.Provider>
+    )
 }
