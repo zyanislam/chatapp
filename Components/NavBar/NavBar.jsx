@@ -49,7 +49,7 @@ const NavBar = () => {
                     <div onClick={()=> setActive(i + 1)} key={1+1} className={`$
                 {Style.NavBar_Box_right_menu_items} ${active == i + 1 ? Style.active_btn : ""
             
-                    }}`}
+                    }`}
                     >
                         <Link className={Style.NavBar_Box_right_menu_items_link}
                         href={el.link}
@@ -61,7 +61,17 @@ const NavBar = () => {
             
                 </div>
                 {/* //MOBILE */}
-                { open && (
+                { <!DOCTYPE html>
+                <html lang="en">
+                <head>
+                    <meta charset="UTF-8" />
+                    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+                    <title>Document</title>
+                </head>
+                <body>
+                    
+                </body>
+                </html>open && (
                                 <div className={Style.mobile_menu}>
                                 {menuItems.map((el, i)=> (
                                     <div onClick={()=> setActive(i + 1)} key={1+1} 
