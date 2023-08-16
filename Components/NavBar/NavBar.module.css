@@ -1,0 +1,30 @@
+
+.NavBar{
+    width: 80%;
+    margin: 3rem auto;
+    position: relative;
+}
+.NavBar_box{
+    display: grid;
+    grid-template-columns: 1fr 1.7fr;
+    align-items: center;
+    gap: 2rem;
+}
+.NavBar_box_right{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.NavBar_box_right_menu{
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    border-bottom: 2px solid transparent;
+    transition: all .3s ease-in-out;
+}
+
+.active_btn{
+    color: #F18303;
+    border-bottom: 2px solid #F18303;
+    padding-bottom: .4rem;
+}
