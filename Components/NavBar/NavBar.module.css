@@ -99,9 +99,12 @@
         text-align: center;
         padding-top: 4rem;
     }
-
+    .mobile_menu_items{
+        margin-top: 1rem;
+    }
+    
     .mobile_menu_btn{
         padding-top: 2rem;
     }
-    
+
 }
