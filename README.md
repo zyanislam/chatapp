@@ -4,7 +4,7 @@ This is a decentralized chat application built on the Ethereum blockchain using 
 
 ## Features
 
-- **Decentralized Messaging**: Messages are stored on the Ethereum blockchain, ensuring data integrity and censorship resistance.
+- **Decentralized Messaging**: Messages are stored on the Ethereum blockchain, ensuring data integrity and censorship resistance (simulated using HardHat)
 
 - **Secure Communication**: Messages are encrypted to maintain user privacy and security.
 
