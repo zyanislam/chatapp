@@ -3,7 +3,7 @@ import { ContextApp } from "../Context/ChatAppContext";
 const index = () => {
     const {  } = useContext(ContextApp);
     return (
-        <div>Hey!</div>
+        <div></div>
     )
 };
 

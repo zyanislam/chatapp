@@ -1,21 +1,20 @@
-
 .NavBar{
     width: 80%;
     margin: 3rem auto;
     position: relative;
 }
-.NavBar_box{
+.NavBar_Box{
     display: grid;
     grid-template-columns: 1fr 1.7fr;
     align-items: center;
     gap: 2rem;
 }
-.NavBar_box_right{
+.NavBar_Box_right{
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
-.NavBar_box_right_menu{
+.NavBar_Box_right_menu{
     display: flex;
     align-items: center;
     gap: 2rem;
@@ -24,23 +23,23 @@
 }
 
 .active_btn{
-    color: #F18303;
+    color: #ffd9ad;
     border-bottom: 2px solid #F18303;
     padding-bottom: .4rem;
 }
 
-.NavBar_box_right_connect{
+.NavBar_Box_right_connect{
     display: flex;
     justify-self: flex-end;
 }
 
-.NavBar_box_right_connect Button{
-    background-color: rgba(0,0,0, 0.25);
+.NavBar_Box_right_connect Button{
+    background-color: #dbdaff;
     padding: 1rem;
     border: none;
     border-radius: .5rem;
     font-size: 1.1rem;
-    color: #F18303;
+    color: #232323;
     font-weight: 700;
     cursor: pointer;
 
@@ -49,11 +48,11 @@
     gap: .5rem;
 }
 
-.NavBar_box_right_close{
+.NavBar_Box_right_close{
     display: none;
 }
 
-.NavBar_box_right_open{
+.NavBar_Box_right_open{
     display: none;
 }
 
@@ -66,22 +65,22 @@
         width: 90%;
         margin: 2rem auto;
     }
-    .NavBar_box{
+    .NavBar_Box{
         grid-template-columns: .6fr 2fr;
         justify-content: space-between;
     }
-    .NavBar_box_right_connect button{
+    .NavBar_Box_right_connect button{
         font-size: 1rem;
         padding: .8rem;
     }
 
-    .NavBar_box_right_open{
+    .NavBar_Box_right_open{
         display: block;
     }
-    .NavBar_box_right_menu{
+    .NavBar_Box_right_menu{
         position: fixed;
         z-index: 111111;
-        background-color: #292F3F;
+        background-color: #28272C;
         width: 100%;
         flex-direction: column;
         height: 100vh;
@@ -94,7 +93,7 @@
         display: block;
         position: fixed;
         z-index: 1111111;
-        background-color: #292F3F;
+        background-color: #28272C;
         inset: 0 0 0 0;
         text-align: center;
         padding-top: 4rem;
