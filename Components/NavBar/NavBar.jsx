@@ -84,7 +84,7 @@ const NavBar = () => {
 
                 <p className={Style.mobile_menu_btn}>
                     <Image src={images.close} alt="close" width={50} heigh={50}
-                    onClick={()=> setOpen(flase)}
+                    onClick={()=> setOpen(false)}
                     />
                 </p>
             </div>
