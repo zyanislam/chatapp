@@ -45,7 +45,7 @@ const NavBar = () => {
         <div className={Style.NavBar}>
             <div className={Style.NavBar_Box}>
               <div className={Style.NavBar_Box_left}>
-                <Image src={images.logo} alt="logo" width={50} height={50}/>
+                <Image src={images.logo} alt="logo" width={175} height={80}/>
               </div>
             <div className={Style.NavBar_Box_right}>
             
