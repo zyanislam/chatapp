@@ -54,9 +54,9 @@ const NavBar = () => {
                 {menuItems.map((el, i)=> (
                   <div
                     onClick={() => setActive(i + 1)}
-                    key={1 + 1}
+                    key={i + 1}
                     className={`${Style.NavBar_Box_right_menu_items} ${active == i + 1 ? Style.active_btn : ""
-                    }}`}
+                    }`}
                     >
                     <Link
                       className={Style.NavBar_Box_right_menu_items_link}
