@@ -86,17 +86,45 @@ export const ProviderApp = ({ children }) => {
             setLoading(true);
             await addMyFriend.wait();
             setLoading(false);
-            router.push("/");
+            router.push('/');
             window.location.reload();
         } catch (error) {
             setError("Something went wrong when you tried to add friends!! Try again.");
         }
     };
 
-    //
+    // Send message to your friend
+    const sendMessage = async ({msg, address}) => {
+        try {
+            if (msg || address) return setError("Please enter your message.");
+
+            const contract = await ConnectingWithContract();
+            const addMessage = await contract.sendMessage(address, msg);
+            setLoading(true);
+            await addMessage.wait();
+            setLoading(false);
+            window.location.reload();
+        } catch (error) {
+            setError("Something went wrong!! Try again.");
+        }
+    };
+
+    // Read user info
+    const readUser = async (userAddress) => {
+        const contract = await ConnectingWithContract();
+        const userName = await contract.getUsername(userAddress);
+        setCurrentUsername(userName);
+        setCurrentUsernameAddress(userAddress)
+        setLoading(true);
+        await addMessage.wait();
+        setLoading(false);
+        window.location.reload();
+       
+    };
+
 
     return (
-        <ContextApp.Provider value={{ readMessage, createAccount, addFriends }}>
+        <ContextApp.Provider value={{ readUser, readMessage, createAccount, addFriends, sendMessage, account, userName, friendList, friendMsg, loading, userLists, error }}>
             {children}
         </ContextApp.Provider>
     )
