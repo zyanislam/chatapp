@@ -10,7 +10,7 @@ import { useContext } from "react";
 const NavBar = () => {
     const menuItems = [
         {
-            menu: "All Users",
+            menu: "ALL USERS",
             link: "allusers",
         },
         {
