@@ -126,8 +126,14 @@ const NavBar = () => {
             </div>
 
             </div>
-            </div>
-             </div>
+        </div>
+        {/* Model Component */}
+        {openModel && (
+          <div className={Style.modelBox}>
+            <Model openModel={ setOpenModel} />
+          </div>
+        )}
+      </div>
     );
 
 };
