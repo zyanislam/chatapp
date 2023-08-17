@@ -1,7 +1,7 @@
-import React, { Children, useEffect, useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { useRouter } from 'next/router'
 
-import { CheckIfWalletIsConnected, ConnectMyWallet, ConnectingWithContract, timeConversion } from "../Utils/apiFeature.js"
+import { CheckIfWalletIsConnected, ConnectMyWallet, ConnectingWithContract } from "../Utils/apiFeature.js"
 
 export const ContextApp = React.createContext();
 
@@ -124,7 +124,7 @@ export const ProviderApp = ({ children }) => {
 
 
     return (
-        <ContextApp.Provider value={{ readUser, readMessage, createAccount, addFriends, sendMessage, account, userName, friendList, friendMsg, loading, userLists, error }}>
+        <ContextApp.Provider value={{ readUser, readMessage, createAccount, addFriends, ConnectMyWallet, CheckIfWalletIsConnected, sendMessage, account, userName, friendList, friendMsg, loading, userLists, error }}>
             {children}
         </ContextApp.Provider>
     )

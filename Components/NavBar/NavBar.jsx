@@ -1,14 +1,14 @@
-import React, { useEffect, useState, useContext } from 'react';
+import React, { useEffect, useState } from 'react';
 import Image from "next/image";
 import Link from "next/link";
 import Style from "./NavBar.module.css";
 import { ContextApp } from '../../Context/ChatAppContext';
 import { Model, Error } from "../index";
-import images from "../../..assets";
+import images from "../../assets";
 import { useContext } from "react";
 
 const NavBar = () => {
-    const MenuItems = [
+    const menuItems = [
         {
             menu: "All Users",
             link: "allusers",
@@ -30,81 +30,90 @@ const NavBar = () => {
             link: "/",
         },
         {
-            menu: "TERM OF USE",
+            menu: "TERMS OF USE",
             link: "/",
         },
-    ];
-    //UseState
-     const [active. setActive] = useState(2);
-     const [open. setOpen] = useState(false);
-     const [openModel. setOpenModel] = useState(false);
+  ];
+  
+    // Use State
+    const [active, setActive] = useState(2);
+    const [open, setOpen] = useState(false);
+    const [openModel, setOpenModel] = useState(false);
 
-     const { account, userName, connetWallet } = useContext(ChatAppContect);
+    const { account, userName, ConnectMyWallet } = useContext(ContextApp);
     return (
         <div className={Style.NavBar}>
             <div className={Style.NavBar_Box}>
-            <div className={Style.NavBar_Box_left}>
-                <Image src={images.logo} alt="logo" width={50} heigh={50}>
-            </div>
+              <div className={Style.NavBar_Box_left}>
+                <Image src={images.logo} alt="logo" width={50} height={50}/>
+              </div>
             <div className={Style.NavBar_Box_right}>
-                {/* //DESKTOP */}
-            <div className={Style.NavBar_Box_right_menu}>
-                {menuItems.map((el, i)=> (
-                    <div onClick={()=> setActive(i + 1)} key={1+1} className={`$
-                {Style.NavBar_Box_right_menu_items} ${active == i + 1 ? Style.active_btn : ""
             
-                    }`}
+              {/* //DESKTOP */}
+              <div className={Style.NavBar_Box_right_menu}>
+                {menuItems.map((el, i)=> (
+                  <div
+                    onClick={() => setActive(i + 1)}
+                    key={1 + 1}
+                    className={`${Style.NavBar_Box_right_menu_items} ${active == i + 1 ? Style.active_btn : ""
+                    }}`}
                     >
-                        <Link className={Style.NavBar_Box_right_menu_items_link}
+                    <Link
+                      className={Style.NavBar_Box_right_menu_items_link}
                         href={el.link}
                         >
                             {el.menu}
+                    </Link>
+                  </div>
+                ))}
+            
+              </div>
+            
+              {/* //MOBILE */}
+              {open && (
+                <div className={Style.mobile_menu}>
+                {menuItems.map((el, i)=> (
+                    <div onClick={()=> setActive(i + 1)} key={i+1} 
+                    className={`${Style.mobile_menu_items} ${
+                        active == i + 1 ? Style.active_btn : ""
+            
+                    }`}
+                    >
+                        <Link className={Style.mobile_menu_items_link}
+                        href={el.link}>
+                          {el.menu}
                         </Link>
                     </div>
                 ))}
-            
-                </div>
-                {/* //MOBILE */}
-                {open && (
-                                <div className={Style.mobile_menu}>
-                                {menuItems.map((el, i)=> (
-                                    <div onClick={()=> setActive(i + 1)} key={i+1} 
-                                    className={`${Style.mobile_menu_items} ${
-                                        active == i + 1 ? Style.active_btn : ""
-                            
-                                    }`}
-                                    >
-                                        <Link className={Style.mobile_menu_items_link}
-                                        href={el.link}
-                                        >
-                                            {el.menu}
-                                        </Link>
-                                    </div>
-                ))}
 
-                <p className={Style.mobile_menu_btn}>
-                    <Image src={images.close} alt="close" width={50} heigh={50}
-                    onClick={()=> setOpen(false)}
-                    />
-                </p>
-            </div>
-                )}
+                  <p className={Style.mobile_menu_btn}>
+                      <Image
+                        src={images.close}
+                        alt="close"
+                        width={50}
+                        height={50}
+                        onClick={()=> setOpen(false)}
+                      />
+                  </p>
+                </div>
+              )}
+            
              {/* CONNECT WALLET */}
              <div className={Style.NavBar_Box_right_connect}>
-             {account== "" ?(
-                <button onClick={()=> connetWallet()}>
+             {account== "" ? (
+                <button onClick={()=> ConnectMyWallet()}>
                 {""}
-                <span>Connect Wallet</span> 
+                <span>Connect My Wallet</span> 
                 </button>
-             ) :(
+             ) : (
                 <button onClick={()=> setOpenModel(true)}>
                     {""}
                     <Image src={userName ? images.accountName : images.create2}
                     alt="Account Image"
                     width={20}
-                    heigh={20} 
+                    height={20} 
                     />
-                    {""}
+                    {''}
                     <small>{userName || "Create Account"}</small>
                 </button>
              )}   
@@ -113,7 +122,7 @@ const NavBar = () => {
              className={Style.NavBar_Box_right_open}
                 onClick={()=> setOpen(true)}
             >
-                <Image src={images.open} alt="open" width={30} heigh={30}
+                <Image src={images.open} alt="open" width={30} height={30}/>
             </div>
 
             </div>
