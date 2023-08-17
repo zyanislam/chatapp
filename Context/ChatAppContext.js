@@ -124,7 +124,7 @@ export const ProviderApp = ({ children }) => {
 
 
     return (
-        <ContextApp.Provider value={{ readUser, readMessage, createAccount, addFriends, sendMessage }}>
+        <ContextApp.Provider value={{ readUser, readMessage, createAccount, addFriends, sendMessage, account, userName, friendList, friendMsg, loading, userLists, error }}>
             {children}
         </ContextApp.Provider>
     )
