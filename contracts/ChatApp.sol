@@ -18,23 +18,23 @@ contract ChatApp {
         string msg;
     }
 
-    struct allUsersList {
+    struct AllUserStruct {
         string name;
         address acccountAddress;
     }
 
-    allUsersList[] getAllUsers;
+    AllUserStruct[] getAllUsers;
 
     mapping(address => user) userList;
     mapping(bytes32 => message[]) allMessages;
 
     // Create User in ChatApp
-    function createUser(string calldata name) external {
+    function createAccount(string calldata name) external {
         require(checkUserExists(msg.sender) == false, "User Exists");
         require(bytes(name).length > 0, "The username cannot be empty!");
 
         userList[msg.sender].name = name;
-        getAllUsers.push(allUsersList(name, msg.sender));
+        getAllUsers.push(AllUserStruct(name, msg.sender));
     }
 
     // Authenticate User
@@ -84,6 +84,7 @@ contract ChatApp {
             pubkey1 = pubkey2;
             pubkey2 = tmp;
         }
+
         for (uint256 i = 0; i < userList[pubkey1].friendList.length; i++) {
             if (userList[pubkey1].friendList[i].pubkey == pubkey2) return true;
         }
@@ -100,7 +101,7 @@ contract ChatApp {
     }
 
     // List of my friends
-    function listOfMyFriends() external view returns (friend[] memory) {
+    function getMyFriendList() external view returns (friend[] memory) {
         return userList[msg.sender].friendList;
     }
 
@@ -142,7 +143,7 @@ contract ChatApp {
     }
 
     // Get All Users in the ChatApp
-    function getAllChatAppUsers() public view returns (allUsersList[] memory) {
+    function getAllAppUser() public view returns (AllUserStruct[] memory) {
         return getAllUsers;
     }
 }

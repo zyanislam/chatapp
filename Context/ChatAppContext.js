@@ -1,50 +1,50 @@
 import React, { useEffect, useState } from 'react'
 import { useRouter } from 'next/router'
 
-import { CheckIfWalletIsConnected, ConnectMyWallet, ConnectingWithContract } from "../Utils/apiFeature.js"
+import { CheckIfWalletIsConnected, connectWallet, connectingWithContract } from "../Utils/apiFeature.js"
 
-export const ContextApp = React.createContext();
+export const ChatAppContect = React.createContext();
 
-export const ProviderApp = ({ children }) => {
+export const ChatAppProvider = ({ children }) => {
     const [account, setAccount] = useState("");
     const [userName, setUserName] = useState("");
-    const [friendList, setFriendList] = useState("");
-    const [friendMsg, setFriendMsg] = useState("");
+    const [friendLists, setFriendLists] = useState([]);
+    const [friendMsg, setFriendMsg] = useState([]);
     const [loading, setLoading] = useState(false);
-    const [userLists, setUserLists] = useState("");
+    const [userLists, setUserLists] = useState([]);
     const [error, setError] = useState("");
 
-    //User Data
-    const [currentUsername, setCurrentUsername] = useState("");
-    const [currentUsernameAddress, setCurrentUsernameAddress] = useState("");
+    // User Data
+    const [currentUserName, setCurrentUserName] = useState("");
+    const [currentUserAddress, setCurrentUserAddress] = useState("");
 
     const router = useRouter();
 
-    //Date Time of Page Loading
+    // Date Time of Page Loading
     const fetchData = async () => {
         try {
-            // Get the contract
-            const contract = await ConnectingWithContract();
+            // Get Contract
+            const contract = await connectingWithContract();
 
-            // Get the account
-            const account = await ConnectMyWallet();
-            setAccount(account);
+            // Get Account
+            const connectAccount = await connectWallet();
+            setAccount(connectAccount);
 
             // Get the user name
-            // const userName = await contract.getUsername(account)
-            // setUsername(userName);
+            // const userName = await contract.getUsername(connectAccount);
+            // setUserName(userName);
 
-            // Get my friend list
-            const friendList = await contract.listOfMyFriends();
-            setFriendList(friendList);
+            // Get My Friend List
+            const friendLists = await contract.getMyFriendList();
+            setFriendLists(friendLists);
 
-            // Get all users list
-            const userLists = await contract.getAllChatAppUsers();
+            // Get All Users List
+            const userLists = await contract.getAllAppUser();
             setUserLists(userLists);
 
         } catch (error) {
-            // setError("Please Install & Connect Your Wallet!");
-            // console.log(error);
+            setError("Please Install & Connect Your Wallet!");
+            console.log(error);
         }
     };
     useEffect(() => {
@@ -54,11 +54,11 @@ export const ProviderApp = ({ children }) => {
     // Read Messages
     const readMessage = async (friendAddress) => {
         try {
-            const contract = await ConnectingWithContract();
+            const contract = await connectingWithContract();
             const read = await contract.readMessage(friendAddress);
             setFriendMsg(read);
         } catch (error) {
-            setError("Currently you have no messages to read")
+            setError("Currently you have no messages to read");
         }
     };
 
@@ -66,8 +66,8 @@ export const ProviderApp = ({ children }) => {
     const createAccount = async ({ name, accountAddress }) => {
         try {
             // if (name || accountAddress)
-            //     return setError("Name & Account Address cannot be empty!")
-            const contract = await ConnectingWithContract();
+            //     return setError("Name & Account Address cannot be empty!");
+            const contract = await connectingWithContract();
             const getCreatedUser = await contract.createAccount(name);
             setLoading(true);
             await getCreatedUser.wait();
@@ -83,7 +83,7 @@ export const ProviderApp = ({ children }) => {
         try {
             if (name || accountAddress) return setError("Please provide the Name & Friend Address");
 
-            const contract = await ConnectingWithContract();
+            const contract = await connectingWithContract();
             const addMyFriend = await contract.addFriend(accountAddress, name);
             setLoading(true);
             await addMyFriend.wait();
@@ -100,7 +100,7 @@ export const ProviderApp = ({ children }) => {
         try {
             if (msg || address) return setError("Please enter your message.");
 
-            const contract = await ConnectingWithContract();
+            const contract = await connectingWithContract();
             const addMessage = await contract.sendMessage(address, msg);
             setLoading(true);
             await addMessage.wait();
@@ -113,10 +113,10 @@ export const ProviderApp = ({ children }) => {
 
     // Read user info
     const readUser = async (userAddress) => {
-        const contract = await ConnectingWithContract();
+        const contract = await connectingWithContract();
         const userName = await contract.getUsername(userAddress);
-        setCurrentUsername(userName);
-        setCurrentUsernameAddress(userAddress)
+        setCurrentUserName(userName);
+        setCurrentUserAddress(userAddress)
         setLoading(true);
         await addMessage.wait();
         setLoading(false);
@@ -126,8 +126,8 @@ export const ProviderApp = ({ children }) => {
 
 
     return (
-        <ContextApp.Provider value={{ readUser, readMessage, createAccount, addFriends, ConnectMyWallet, CheckIfWalletIsConnected, sendMessage, account, userName, friendList, friendMsg, loading, userLists, error }}>
+        <ChatAppContect.Provider value={{ readUser, readMessage, createAccount, addFriends, sendMessage, account, userName, friendLists, friendMsg, loading, userLists, error, currentUserName, currentUserAddress, connectWallet, CheckIfWalletIsConnected }}>
             {children}
-        </ContextApp.Provider>
+        </ChatAppContect.Provider>
     )
 }
