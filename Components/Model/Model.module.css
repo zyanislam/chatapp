@@ -11,7 +11,7 @@
 
 .Model_Box_right{
     font-size: 3rem;
-    color: #a3a0f9;
+    color: #c8c6ff;
     line-height: 0.9;
 }
 
@@ -25,7 +25,7 @@
     align-items: center;
     margin-block: 1rem;
     gap: 1rem;
-    background-color: #28272C;
+    background-color: #fffaec;
     padding: 1rem;
     border-radius: 0.5rem;
     cursor: pointer;
@@ -36,7 +36,7 @@
     background-color: transparent;
     outline: none;
     border: none;
-    color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
 }
 
 .Model_Box_right_name_btn{
@@ -51,7 +51,7 @@
     color: #ffffff;
     font-size: 1.2rem;
     font-weight: 700;
-    background-color: #a3a0f9;
+    background-color: #ffd558;
     padding: 1rem;
     border-radius: 0.5rem;
     display: flex;

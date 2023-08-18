@@ -1,10 +1,13 @@
 import logo from "./logo.png";
 import close from "./close.png";
+import cancel from "./cancel.svg";
 import open from "./open.png";
 import search from "./search.png";
 import avatar from "./avatar.gif";
 import smile from "./smile.png";
 import send from "./send.png";
+import send2 from "./send2.png";
+import send3 from "./send3.svg";
 import file from "./file.png";
 import user from "./user.png";
 import clear from "./delete.png";
@@ -12,6 +15,8 @@ import create from "./create.png";
 import create2 from "./create2.png";
 import buddy from "./buddy.png";
 import hero from "./hero.png";
+import hero2 from "./hero2.png";
+import hero4 from "./hero4.gif";
 import account from "./account.png";
 import username from "./username.png";
 import friends from "./friends.png";
@@ -33,11 +38,14 @@ import image10 from "./img10.gif";
 export default {
   logo,
   close,
+  cancel,
   open,
   search,
   avatar,
   smile,
   send,
+  send2,
+  send3,
   file,
   user,
   clear,
@@ -45,6 +53,8 @@ export default {
   create2,
   buddy,
   hero,
+  hero2,
+  hero4,
   account,
   username,
   friends,

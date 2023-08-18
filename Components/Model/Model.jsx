@@ -37,13 +37,13 @@ const Model = ({ openBox, title, head, info, image, functionName, address }) => 
             <div className={Style.Model_Box_right_name_btn}>
               <button onClick={()=> functionName({name, accountAddress})}>
                 {""}
-                <Image src={images.send} alt="send" width={30} height={30} />
+                <Image src={images.send3} alt="send" width={30} height={30} />
                 {""}
                 Submit
               </button>
               <button onClick={()=> openBox(false)}>
                 {""}
-                <Image src={images.close} alt="close" width={30} height={30} />
+                <Image src={images.cancel} alt="close" width={30} height={30} />
                 {""}
                 Cancel
               </button>
