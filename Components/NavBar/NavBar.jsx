@@ -136,7 +136,7 @@ const NavBar = () => {
               title="Welcome to"
               head="Ripples"
               info="In a world where data privacy and security are paramount, Ripples takes a giant leap forward by utilizing the inherent security features of blockchain. Every conversation on our platform is encrypted, tamper-proof, and stored across a distributed network, ensuring that your personal and sensitive information remains truly private."
-              image={images.hero2}
+              image={images.hero4}
               functionName={createAccount}
               address={account}
             />

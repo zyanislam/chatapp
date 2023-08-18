@@ -14,7 +14,7 @@ const Model = ({ openBox, title, head, info, image, functionName, address }) => 
     <div className={Style.Model}>
       <div className={Style.Model_Box}>
         <div className={Style.Model_Box_left}>
-          <Image src={image} alt="buddy" width={700} height={700} />
+          <Image src={image} alt="buddy" width={900} height={500} />
         </div>
         <div className={Style.Model_Box_right}>
           <h1>
