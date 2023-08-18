@@ -9,8 +9,9 @@
     padding: 2rem;
     border-radius: 50px;
     background: #a3a0f9;
-    box-shadow: 5px 5px 10px #dbdaff,
-    -5px -5px 10px #a3a0f9
+    box-shadow: 5px 5px 10px #9d9afa,
+    -5px -5px 10px #a3a0f9;
+    font-size: 1.13rem;
 }
 
 @media only screen and (max-width: 35em) {
