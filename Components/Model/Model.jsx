@@ -34,7 +34,7 @@ const Model = ({ openBox, title, head, info, image, functionName, address }) => 
               />
             </div>
 
-            <div className={Style.Model_Box_right_name_button}>
+            <div className={Style.Model_Box_right_name_btn}>
               <button onClick={()=> functionName({name, accountAddress})}>
                 {""}
                 <Image src={images.send} alt="send" width={30} height={30} />
