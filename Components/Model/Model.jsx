@@ -14,11 +14,11 @@ const Model = ({ openBox, title, head, info, image, functionName, address }) => 
     <div className={Style.Model}>
       <div className={Style.Model_Box}>
         <div className={Style.Model_Box_left}>
-          <Image src={image} alt="buddy" width={900} height={500} />
+          <Image src={image} alt="buddy" width={950} height={550} />
         </div>
         <div className={Style.Model_Box_right}>
           <h1>
-            {title}<span>{head}</span>
+            {title} <span>{head}</span>
           </h1>
           <p>{info}</p>
           <div className={Style.Model_Box_right_name}>

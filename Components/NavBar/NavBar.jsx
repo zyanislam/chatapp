@@ -129,7 +129,7 @@ const NavBar = () => {
         </div>
 
         {/* Model Component */}
-        {!openModel && (
+        {openModel && (
           <div className={Style.modelBox}>
             <Model
               openBox={setOpenModel}
