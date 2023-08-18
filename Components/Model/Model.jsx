@@ -12,6 +12,9 @@ const Model = ({ openBox, title, head, info, image, functionName, address }) => 
   const { loading } = useContext(ContextApp);
   return (
     <div className={Style.Model}>
+      <div className={Style.Model_Box_space}>
+
+      </div>
       <div className={Style.Model_Box}>
         <div className={Style.Model_Box_left}>
           <Image src={image} alt="buddy" width={950} height={550} />
@@ -21,34 +24,42 @@ const Model = ({ openBox, title, head, info, image, functionName, address }) => 
             {title} <span>{head}</span>
           </h1>
           <p>{info}</p>
-          <div className={Style.Model_Box_right_name}>
-            <div className={Style.Model_Box_right_name_info}>
-              <Image src={images.username} alt="user" width={30} height={30} />
-              <input type="text" placeholder='Your Name' onClick={(e) => setName(e.target.value)}
-              />
-            </div>
 
-            <div className={Style.Model_Box_right_name_info}>
-              <Image src={images.account} alt="user" width={30} height={30} />
-              <input type="text" placeholder={address || "Enter Address"} onClick={(e) => setAccountAddress(e.target.value)}
-              />
+          {
+            loading == true ? (
+              <Loader />
+            ) : (
+              <div className={Style.Model_Box_right_name}>
+              <div className={Style.Model_Box_right_name_info}>
+                <Image src={images.username} alt="user" width={30} height={30} />
+                <input type="text" placeholder='Your Name' onClick={(e) => setName(e.target.value)}
+                />
+              </div>
+  
+              <div className={Style.Model_Box_right_name_info}>
+                <Image src={images.account} alt="user" width={30} height={30} />
+                <input type="text" placeholder={address || "Enter Address"} onClick={(e) => setAccountAddress(e.target.value)}
+                />
+              </div>
+  
+              <div className={Style.Model_Box_right_name_btn}>
+                <button onClick={()=> functionName({name, accountAddress})}>
+                  {""}
+                  <Image src={images.send3} alt="send" width={30} height={30} />
+                  {""}
+                  Submit
+                </button>
+                <button onClick={()=> openBox(false)}>
+                  {""}
+                  <Image src={images.cancel} alt="close" width={30} height={30} />
+                  {""}
+                  Cancel
+                </button>
+              </div>
             </div>
-
-            <div className={Style.Model_Box_right_name_btn}>
-              <button onClick={()=> functionName({name, accountAddress})}>
-                {""}
-                <Image src={images.send3} alt="send" width={30} height={30} />
-                {""}
-                Submit
-              </button>
-              <button onClick={()=> openBox(false)}>
-                {""}
-                <Image src={images.cancel} alt="close" width={30} height={30} />
-                {""}
-                Cancel
-              </button>
-            </div>
-          </div>
+            )
+          }
+          
         </div>
       </div>
     </div>

@@ -9,6 +9,10 @@
     align-items: center;
 }
 
+.Model_Box_space{
+    height: 160px !important;
+}
+
 .Model_Box_right h1{
     font-size: 3rem;
     color: #c8c6ff;
@@ -69,6 +73,10 @@
     
     .Model_Box{
         grid-template-columns: 1fr;
+    }
+
+    .Model_Box_space{
+        height: 0% !important;
     }
 
     .Model_Box_right h1{
