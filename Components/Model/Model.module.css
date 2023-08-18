@@ -1,0 +1,52 @@
+.Model{
+    width: 85%;
+    margin: 1rem auto;
+}
+
+.Model_Box{
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+    align-items: center;
+}
+
+.Model_Box_right{
+    font-size: 3rem;
+    color: #a3a0f9;
+    line-height: 0.9;
+}
+
+.Model_Box_right h1 span{
+    display: block;
+    font-size: 5rem;
+}
+
+.Model_Box_right_name_info{
+    display: flex;
+    align-items: center;
+    margin-block: 1rem;
+    gap: 1rem;
+    background-color: #28272C;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    cursor: pointer;
+}
+
+.Model_Box_right_name_info input{
+    width: 100%;
+    background-color: transparent;
+    outline: none;
+    border: none;
+    color: #a3a0f9;
+}
+
+@media only screen and (max-width: 35em){
+    .Model{
+        width: 90%;
+    }
+    
+    .Model_Box{
+        display: grid;
+        grid-template-columns: 1.5fr 1fr;
+        align-items: center;
+    }
+}
