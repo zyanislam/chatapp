@@ -40,7 +40,7 @@ const NavBar = () => {
     const [open, setOpen] = useState(false);
     const [openModel, setOpenModel] = useState(false);
 
-    const { account, userName, ConnectMyWallet } = useContext(ContextApp);
+    const { account, userName, ConnectMyWallet, createAccount, error } = useContext(ContextApp);
     return (
         <div className={Style.NavBar}>
             <div className={Style.NavBar_Box}>
@@ -127,15 +127,23 @@ const NavBar = () => {
 
             </div>
         </div>
+
         {/* Model Component */}
-        {openModel && (
+        {!openModel && (
           <div className={Style.modelBox}>
-            <Model openModel={ setOpenModel} />
+            <Model
+              openModel={setOpenModel}
+              title="Welcome to"
+              head="Ripples"
+              info="In a world where data privacy and security are paramount, Ripples takes a giant leap forward by utilizing the inherent security features of blockchain. Every conversation, message, and media shared on our platform is encrypted, tamper-proof, and stored across a distributed network, ensuring that your personal and sensitive information remains truly private."
+              images={images.hero}
+              functionName={createAccount}
+            />
           </div>
         )}
+        {error == "" ? "" : <Error error={error} />}
       </div>
     );
-
 };
 
 
