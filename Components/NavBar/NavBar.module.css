@@ -23,8 +23,8 @@
 }
 
 .active_btn{
-    color: #ffd9ad;
-    border-bottom: 2px solid #F18303;
+    color: #a3a0f9;
+    border-bottom: 2px solid #dbdaff;
     padding-bottom: .4rem;
 }
 
@@ -58,6 +58,13 @@
 
 .mobile_menu{
     display: none;
+}
+
+.modelBox{
+    position: fixed;
+    inset: 0 0 0 0;
+    background-color: #28272C;
+    z-index: 77777777;
 }
 
 @media  only screen and (max-width: 35em) {
@@ -104,6 +111,11 @@
     
     .mobile_menu_btn{
         padding-top: 2rem;
+    }
+
+    .modelBox{
+        position: absolute;
+        inset: 0 0 -70% 0%;
     }
 
 }
