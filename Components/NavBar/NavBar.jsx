@@ -1,11 +1,10 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useContext} from 'react';
 import Image from "next/image";
 import Link from "next/link";
 import Style from "./NavBar.module.css";
-import { ContextApp } from '../../Context/ChatAppContext';
+import { ChatAppContect } from '../../Context/ChatAppContext';
 import { Model, Error } from "../index";
 import images from "../../assets";
-import { useContext } from "react";
 
 const NavBar = () => {
     const menuItems = [
@@ -40,7 +39,7 @@ const NavBar = () => {
     const [open, setOpen] = useState(false);
     const [openModel, setOpenModel] = useState(false);
 
-    const { account, userName, ConnectMyWallet, createAccount, error } = useContext(ContextApp);
+    const { account, userName, connectWallet, createAccount, error } = useContext(ChatAppContect);
     return (
         <div className={Style.NavBar}>
             <div className={Style.NavBar_Box}>
@@ -72,7 +71,7 @@ const NavBar = () => {
               {/* //MOBILE */}
               {open && (
                 <div className={Style.mobile_menu}>
-                {menuItems.map((el, i)=> (
+                {menuItems.map((el, i) => (
                     <div onClick={()=> setActive(i + 1)} key={i+1} 
                     className={`${Style.mobile_menu_items} ${
                         active == i + 1 ? Style.active_btn : ""
@@ -100,10 +99,10 @@ const NavBar = () => {
             
              {/* CONNECT WALLET */}
              <div className={Style.NavBar_Box_right_connect}>
-             {account== "" ? (
-                <button onClick={()=> ConnectMyWallet()}>
+             {account == "" ? (
+                <button onClick={()=> connectWallet()}>
                 {""}
-                <span>Connect My Wallet</span> 
+                <span>Connect Wallet</span> 
                 </button>
              ) : (
                 <button onClick={()=> setOpenModel(true)}>
@@ -146,6 +145,5 @@ const NavBar = () => {
       </div>
     );
 };
-
 
 export default NavBar;
