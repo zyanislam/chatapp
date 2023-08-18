@@ -32,7 +32,7 @@ export const ConnectMyWallet = async () => {
     }
 }
 
-const getContract = (signerOrProvider) => new ethers.Contract(ChatAppAddress, ChatAppABI, signerOrProvider);
+const fetchContract = (signerOrProvider) => new ethers.Contract(ChatAppAddress, ChatAppABI, signerOrProvider);
 
 // General Functions required to have a connection & communication with the SmartContract
 export const ConnectingWithContract = async () => {
@@ -42,7 +42,6 @@ export const ConnectingWithContract = async () => {
         const provider = new ethers.providers.Web3Provider(connection);
         const signer = provider.getSigner();
         const contract = fetchContract(signer);
-
         return contract;
     } catch (error) {
         console.log(error);
