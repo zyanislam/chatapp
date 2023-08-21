@@ -60,7 +60,18 @@
     .Filter_box{
         flex-direction: column;
         gap: 1rem;
-
     }
-    
+
+    .Filter_box_left_search input{
+        width: 100%;
+    }
+
+    .Filter_model{
+        position: absolute;
+        inset: 0 0 -70% 0;
+    }
+
+    .Filter_box_right button{
+        font-size: .5rem;
+    }
 }
