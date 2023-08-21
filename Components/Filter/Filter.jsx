@@ -31,6 +31,23 @@ const Filter = () => {
           </button>
         </div>
       </div>
+      {/* // Model Component */}
+      {addFriend && (
+        <div className={Style.Filter_model}>
+          <Model
+            openBox={setAddFriend}
+            title="WELCOME TO"
+              head="CHAT BUDDY"
+              info="Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+              Ea adipisci fugiat est optio laudantium praesentium repudiandae vitae 
+              voluptatibus quae, animi odit architecto? Voluptatum blanditiis quasi ipsum. 
+              Qui adipisci magnam eaque." 
+              smallInfo="Kindly Select Your Friend Name & Address.."
+              image={images.hero}
+              functionName={addFriends}
+          />
+        </div>
+      )}
     </div>
   )
 }
