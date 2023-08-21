@@ -4,11 +4,12 @@ import Image from "next/image";
 //Internal Import
 import Style from './Filter.module.css';
 import images from '../../assets';
-import {ChatAppContext} from '../../Context/ChatAppContext';
+import {ChatAppContect} from '../../Context/ChatAppContext';
 import {Model} from "../index";
 
 const Filter = () => {
-  const {account, addFriends } = useContext(ChatAppContext);
+  const {account, addFriends } = useContext(ChatAppContect);
+  const { } = useContext(ChatAppContect);
   //USESTATE
   const [addFriend, setFriend] = useState(false);
   return (
@@ -49,7 +50,7 @@ const Filter = () => {
         </div>
       )}
     </div>
-  )
-}
+  );
+};
 
 export default Filter
