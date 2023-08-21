@@ -24,9 +24,12 @@ const UserCard = ({el, i, addFriends }) => {
             addFriends({name: el.name, accountAddress:
           el.accountAddress})
           }
-          ></button>
+          >
+             Add Friend
+          </button>
         </div>
       </div>
+      <small className={Style.number}>{i + 1}</small>
     </div>
   )
 }
