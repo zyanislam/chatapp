@@ -25,6 +25,10 @@ const Filter = () => {
             <Image src={images.clear} alt="clear" width={20} height={20}
             CLEAR CHAT
           </button>
+          <button onClick={()=> setAddFriend(true)}>
+            <Image src={images.clear} alt="clear" width={20} height={20}
+            ADD FRIEND
+          </button>
         </div>
       </div>
     </div>
