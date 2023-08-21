@@ -1,9 +1,18 @@
-import React from 'react'
+import React from "react";
+import Image from "next/image";
 
-const UserCard = () => {
+//Internal Import
+import Style from './UserCard.module.css';
+import images from '../../assets';
+
+const UserCard = ({el, i, addFriends }) => {
   return (
-    <div>UserCard</div>
+    <div className={Style.UserCard}>
+      <div className={Style.UserCard_box}>
+        <Image src={images[`image${i+1}`]}
+      </div>
+    </div>
   )
 }
 
-export default UserCard
+export default UserCard;
