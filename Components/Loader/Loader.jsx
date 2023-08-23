@@ -7,10 +7,10 @@ const Loader = () => {
   return (
     <div className={Style.Loader}>
       <div className={Style.Loader_Box}>
-        <Image src={images.loader} alt='loader' width={100} height={100}/>
+        <Image src={images.loader} alt="loader" width={100} height={100}/>
       </div>
     </div>
   )
 }
 
-export default Loader
+export default Loader;

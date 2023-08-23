@@ -13,4 +13,4 @@ const Error = ({ error }) => {
   )
 };
 
-export default Error
+export default Error;

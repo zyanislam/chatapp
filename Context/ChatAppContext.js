@@ -31,8 +31,8 @@ export const ChatAppProvider = ({ children }) => {
             setAccount(connectAccount);
 
             // Get the user name
-            // const userName = await contract.getUsername(connectAccount);
-            // setUserName(userName);
+            const userName = await contract.getUsername(connectAccount);
+            setUserName(userName);
 
             // Get My Friend List
             const friendLists = await contract.getMyFriendList();

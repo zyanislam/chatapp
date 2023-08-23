@@ -27,23 +27,39 @@ const Model = ({ openBox, title, head, info, image, functionName, address }) => 
 
           {
             loading == true ? (
-              <Loader />
+              <Loader/>
             ) : (
               <div className={Style.Model_Box_right_name}>
-              <div className={Style.Model_Box_right_name_info}>
-                <Image src={images.username} alt="user" width={30} height={30} />
-                <input type="text" placeholder='Your Name' onChange={(e) => setName(e.target.value)}
-                />
-              </div>
+                <div className={Style.Model_Box_right_name_info}>
+                  <Image
+                    src={images.username}
+                    alt="user"
+                    width={30}
+                    height={30}
+                  />
+                  <input
+                    type="text"
+                    placeholder="Your Name"
+                    onChange={(e) => setName(e.target.value)}
+                  />
+                </div>
   
-              <div className={Style.Model_Box_right_name_info}>
-                <Image src={images.account} alt="user" width={30} height={30} />
-                <input type="text" placeholder={address || "Enter Address.."} onChange={(e) => setAccountAddress(e.target.value)}
-                />
-              </div>
+                <div className={Style.Model_Box_right_name_info}>
+                    <Image
+                      src={images.account}
+                      alt="user"
+                      width={30}
+                      height={30}
+                    />
+                    <input
+                      type="text"
+                      placeholder={address || "Enter Address.."}
+                      onChange={(e) => setAccountAddress(e.target.value)}
+                  />
+                </div>
   
               <div className={Style.Model_Box_right_name_btn}>
-                <button onClick={()=> functionName({name, accountAddress})}>
+                <button onClick={()=> functionName({ name, accountAddress })}>
                   {""}
                   <Image src={images.send3} alt="send" width={30} height={30} />
                   {""}
