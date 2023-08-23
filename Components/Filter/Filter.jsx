@@ -27,8 +27,8 @@ const Filter = () => {
               alt="clear"
               width={20}
               height={20}
-              CLEAR CHAT
             />
+            CLEAR CHAT
           </button>
           <button onClick={()=> setAddFriend(true)}>
             <Image
@@ -36,8 +36,8 @@ const Filter = () => {
               alt="clear"
               width={20}
               height={20}
-              ADD FRIEND
             />
+            ADD FRIEND
           </button>
         </div>
       </div>
@@ -48,10 +48,9 @@ const Filter = () => {
           <Model
             openBox={setAddFriend}
             title="Welcome To"
-            head="Ripples"
-            info="Lorem ipsum dolor sit amet consectetur adipisicing elit." 
-            smallInfo="Select Your Friend Name & Address.."
-            image={images.hero4}
+            head="Ripples!!"
+            info="Select Your Friend Name & Address.." 
+            image={images.hero}
             functionName={addFriends}
           />
         </div>
