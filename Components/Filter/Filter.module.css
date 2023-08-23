@@ -4,12 +4,12 @@
     margin: 1rem auto;
 }
 
-.Filter_box{
+.Filter_Box{
     display: flex;
     justify-content: space-between;
 }
 
-.Filter_box_left_search{
+.Filter_Box_left_search{
     display: flex;
     align-items: center;
     gap: 1rem;
@@ -19,7 +19,7 @@
     color: #f18303;
 }
 
-.Filter_box_left_search input{
+.Filter_Box_left_search input{
     background-color: transparent;
     outline: none;
     border: none;
@@ -28,12 +28,12 @@
     width: 20rem;
 }
 
-.Filter_box_right{
+.Filter_Box_right{
     display: flex;
     gap: 1rem;
 }
 
-.Filter_box_right button{
+.Filter_Box_right button{
     background-color: rgba(0,0,0,0.25);
     outline: none;
     border: none;
@@ -57,12 +57,12 @@
     .Filter{
         width: 90%;
     }
-    .Filter_box{
+    .Filter_Box{
         flex-direction: column;
         gap: 1rem;
     }
 
-    .Filter_box_left_search input{
+    .Filter_Box_left_search input{
         width: 100%;
     }
 
@@ -71,7 +71,7 @@
         inset: 0 0 -70% 0;
     }
 
-    .Filter_box_right button{
+    .Filter_Box_right button{
         font-size: .5rem;
     }
 }
