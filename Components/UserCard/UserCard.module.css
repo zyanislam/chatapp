@@ -15,12 +15,12 @@
 }
 
 .UserCard_Box_info button{
-     background-color: rgba(0, 0, 0, 0.25);
-     color: #F18303;
+     background-color: #a3a0f9;
+     color: #ffffff;
      width: 50%;
      padding: 1rem;
      border: none;
-     border-radius: .5rem;
+     border-radius: 1.25rem;
      font-size: 1rem;
      cursor: pointer;
 }
@@ -30,6 +30,6 @@
     right: 1rem;
     padding: 1rem 1.3rem;
     border-radius: 50%;
-    background-color: #F18303;
+    background-color: #a3a0f9;
     top: 1rem;
 }
