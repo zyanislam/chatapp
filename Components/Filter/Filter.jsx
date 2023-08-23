@@ -17,7 +17,7 @@ const Filter = () => {
         <div className={Style.Filter_Box_left}>
           <div className={Style.Filter_Box_left_search}>
             <Image src={images.search} alt="image" width={20} height={20} />
-            <input type="text" placeholder="search.." />
+            <input type="text" placeholder="Search.." />
           </div>
         </div>
         <div className={Style.Filter_Box_right}>
