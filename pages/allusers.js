@@ -2,7 +2,7 @@ import React, { useState, useEffect, useContext} from 'react';
 
 //Internal Import
 import { UserCard } from "../Components/index";
-import Style from '../styles/alluser.module.css';
+import Style from './alluser.module.css';
 import { ChatAppContect } from "../Context/ChatAppContext";
 const allusers = () => {
 

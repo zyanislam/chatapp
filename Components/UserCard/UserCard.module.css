@@ -6,15 +6,15 @@
     position: relative;
 }
 
-.UserCard_box_img{
+.UserCard_Box_img{
     border-radius: 50%;
 }
 
-.UserCard_box_info{
+.UserCard_Box_info{
     line-height: .6;
 }
 
-.UserCard_box_info button{
+.UserCard_Box_info button{
      background-color: rgba(0, 0, 0, 0.25);
      color: #F18303;
      width: 50%;
