@@ -51,7 +51,7 @@ const Filter = () => {
             head="Ripples"
             info="Lorem ipsum dolor sit amet consectetur adipisicing elit." 
             smallInfo="Select Your Friend Name & Address.."
-            image={images.hero}
+            image={images.hero4}
             functionName={addFriends}
           />
         </div>
