@@ -4,7 +4,7 @@
     line-height: 0;
     gap: 1rem;
     padding: 1rem 0;
-    border: 1px solid #a3a0f9;
+    border-bottom: 1px solid #a3a0f9;
 }
 
 .Card_Box_right{
