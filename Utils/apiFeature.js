@@ -13,7 +13,7 @@ export const CheckIfWalletIsConnected = async () => {
         return firstAccount;
     }
     catch (error) {
-        console.log("Install MetaMask");
+        console.log(error);
     }
 };
 
