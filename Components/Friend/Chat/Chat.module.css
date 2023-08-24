@@ -26,4 +26,18 @@
 
 .Chat_box_left_title{
     display: flex;
+    align-items: center;
+    gap: 1rem;
+    font-size: 1rem;
+    font-size: 1rem;
+}
+
+.Chat_box_send_img{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.Chat_box_send_img input{
+    
 }
