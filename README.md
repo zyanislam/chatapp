@@ -21,6 +21,8 @@ Follow these instructions to set up and run the chat application locally on your
 ### Prerequisites
 
 - Node.js and npm installed. [Download Node.js](https://nodejs.org/en/download/)
+  
+- Hardhat, Web3Modal and Ethers.
 
 - Metamask browser extension installed. [Get Metamask](https://metamask.io/)
 
