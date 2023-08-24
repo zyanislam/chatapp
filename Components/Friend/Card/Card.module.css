@@ -8,5 +8,14 @@
 }
 
 .Card_Box_right{
-    
+    display: flex;
+    gap: 3rem;
+}
+
+.Card_Box_right_middle{
+    margin-top: -1.2rem;
+}
+
+.Card_Box_left{
+    border-radius: 50%;
 }
