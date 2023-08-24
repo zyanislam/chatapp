@@ -1,7 +1,9 @@
 import React, { useEffect, useState } from 'react'
 import { useRouter } from 'next/router'
 
-import { CheckIfWalletIsConnected, connectWallet, connectingWithContract } from "../Utils/apiFeature.js"
+import {
+    CheckIfWalletIsConnected, connectWallet, connectingWithContract
+} from "../Utils/apiFeature.js"
 
 export const ChatAppContect = React.createContext();
 

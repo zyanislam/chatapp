@@ -2,6 +2,8 @@ import { ethers } from "ethers";
 import Web3Modal from "web3modal";
 import { ChatAppAddress, ChatAppABI } from "../Context/constants";
 
+// General Functions required to have a connection & communication with the SmartContract
+
 // Checks whether the user's Wallet is connected or not
 export const CheckIfWalletIsConnected = async () => {
     try {
@@ -33,7 +35,6 @@ export const connectWallet = async () => {
 
 const fetchContract = (signerOrProvider) => new ethers.Contract(ChatAppAddress, ChatAppABI, signerOrProvider);
 
-// General Functions required to have a connection & communication with the SmartContract
 export const connectingWithContract = async () => {
     try {
         const web3modal = new Web3Modal();
@@ -51,7 +52,13 @@ export const connectingWithContract = async () => {
 // Curates the Readable timestamp for the messages
 export const converTime = (time) => {
     const newTime = new Date(time.toNumber());
-    const realTime = newTime.getHours() + ":" + newTime.getMinutes() + ":" + newTime.getSeconds() + " Date: " + newTime.getDate() + "/" + (newTime.getMonth() + 1) + "/" + newTime.getFullYear();
+    const realTime =
+        newTime.getHours() + ":" +
+        newTime.getMinutes() + ":" +
+        newTime.getSeconds() + "  Date:" +
+        newTime.getDate() + "/" +
+        (newTime.getMonth() + 1) + "/" +
+        newTime.getFullYear();
     
     return realTime;
 };
