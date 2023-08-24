@@ -73,14 +73,26 @@ const Chat = ({ functionName, readMessage, friendMsg, account, userName, loading
                     {""}
                   </p>
                 </div>
-                ))}
-          </div>
-          <div className={Style.Chat_box_left}>
+              ))}
           </div>
         </div>
+
+        {currentUserName && currentUserAddress ? (
+          <div className={Style.Chat_box_send}>
+            <div className={Style.Chat_box_send_img}>
+              <Image
+                src={images.smile}
+                alt='smile'
+                width={50}
+                height={50}
+              />
+              <input type="text" placeholder="Write Your Message.." onChange={(e)=> setMessage(e.target.value)}/>
+            </div>
+          </div>
+        ): ""}
       </div>
     </div>
-  )
+  );
 };
 
 export default Chat;
