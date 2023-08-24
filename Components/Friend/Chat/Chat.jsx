@@ -23,11 +23,17 @@ const Chat = ({
     address: "",
   });
   const router = useRouter();
+
   useEffect(() => {
     if (!router.isReady) return;
     setChatData(router.query);
-    readMessage(router.query.address);
-    readUser(router.query.name)
+  }, [router.isReady]);
+
+  useEffect(() => {
+    if (chatData.address) {
+    readMessage(chatData.address);
+      readUser(chatData.address);
+  }
   }, [router.isReady]);
 
   return (

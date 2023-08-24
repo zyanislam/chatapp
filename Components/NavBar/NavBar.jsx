@@ -21,16 +21,8 @@ const NavBar = () => {
             link: "/",
         },
         {
-            menu: "SETTING",
-            link: "/",
-        },
-        {
             menu: "FAQS",
-            link: "/",
-        },
-        {
-            menu: "TERMS OF USE",
-            link: "/",
+            link: <a href="https://github.com/zyanislam/chatapp">a</a>,
         },
   ];
   

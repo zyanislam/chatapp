@@ -59,7 +59,7 @@ export const ChatAppProvider = ({ children }) => {
             const read = await contract.readMessage(friendAddress);
             setFriendMsg(read);
         } catch (error) {
-            setError("Currently you have no messages to read");
+            console.log("Currently you have no new Message!");
         }
     };
 
