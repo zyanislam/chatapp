@@ -1,0 +1,14 @@
+.Friend{
+    width: 80%;
+    margin: 1rem auto;
+}
+
+.Friend_Box{
+    display: grid;
+    grid-template-columns: 1.4fr 3fr;
+    gap: 2rem;
+}
+
+.Friend_Box_left{
+    
+}
