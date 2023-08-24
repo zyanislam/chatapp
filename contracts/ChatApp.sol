@@ -18,12 +18,12 @@ contract ChatApp {
         string msg;
     }
 
-    struct AllUserStruct {
+    struct AllUserStruck {
         string name;
-        address acccountAddress;
+        address accountAddress;
     }
 
-    AllUserStruct[] getAllUsers;
+    AllUserStruck[] getAllUsers;
 
     //Contains all the users
     mapping(address => user) userList;
@@ -41,7 +41,7 @@ contract ChatApp {
         require(bytes(name).length > 0, "The username cannot be empty!");
 
         userList[msg.sender].name = name;
-        getAllUsers.push(AllUserStruct(name, msg.sender));
+        getAllUsers.push(AllUserStruck(name, msg.sender));
     }
 
     // Get Username
@@ -139,7 +139,7 @@ contract ChatApp {
     }
 
     // Get All Users in the ChatApp
-    function getAllAppUser() public view returns (AllUserStruct[] memory) {
+    function getAllAppUser() public view returns (AllUserStruck[] memory) {
         return getAllUsers;
     }
 }
