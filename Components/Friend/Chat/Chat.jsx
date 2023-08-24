@@ -40,10 +40,40 @@ const Chat = ({ functionName, readMessage, friendMsg, account, userName, loading
             {
               friendMsg.map((el, i) => (
                 <div>
-                  
+                  {el.sender == chatData.address ? (
+                    <div className={Style.Chat_box_left_title}>
+                      <Image
+                        src={images.accountName}
+                        alt='image'
+                        width={50}
+                        height={50}
+                      />
+                      <span>
+                        {chatData.name} {""}
+                        <small>{converTime(el.timestamp)}</small>
+                      </span>
+                    </div>
+                  ) : (
+                    <div className={Style.Chat_box_left_title}>
+                      <Image
+                        src={images.accountName}
+                        alt='image'
+                        width={50}
+                        height={50}
+                      />
+                      <span>
+                        {userName} {""}
+                        <small>Time: {converTime(el.timestamp)}</small>
+                      </span>
+                    </div>
+                  )}
+                  <p key={i + 1}>
+                    {el.msg}
+                    {""}
+                    {""}
+                  </p>
                 </div>
-                ))
-            }
+                ))}
           </div>
           <div className={Style.Chat_box_left}>
           </div>
