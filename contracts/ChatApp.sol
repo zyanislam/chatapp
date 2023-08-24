@@ -25,21 +25,23 @@ contract ChatApp {
 
     AllUserStruct[] getAllUsers;
 
+    //Contains all the users
     mapping(address => user) userList;
+    //Contains messages between two users
     mapping(bytes32 => message[]) allMessages;
-
-    // Create User in ChatApp
-    function createAccount(string calldata name) external {
-        require(checkUserExists(msg.sender) == false, "User Exists");
-        require(bytes(name).length > 0, "The username cannot be empty!");
-
-        userList[msg.sender].name = name;
-        getAllUsers.push(AllUserStruct(name, msg.sender));
-    }
 
     // Authenticate User
     function checkUserExists(address pubkey) public view returns (bool) {
         return bytes(userList[pubkey].name).length > 0;
+    }
+
+    // Create User Account in ChatApp
+    function createAccount(string calldata name) external {
+        require(checkUserExists(msg.sender) == false, "User Already Exists!");
+        require(bytes(name).length > 0, "The username cannot be empty!");
+
+        userList[msg.sender].name = name;
+        getAllUsers.push(AllUserStruct(name, msg.sender));
     }
 
     // Get Username
@@ -116,14 +118,8 @@ contract ChatApp {
 
     // Sent Message Function
     function sendMessage(address friend_key, string calldata _msg) external {
-        require(
-            checkUserExists(msg.sender),
-            "Create an account first to send a message."
-        );
-        require(
-            checkUserExists(friend_key),
-            "User not registered! Please Sign-Up first."
-        );
+        require(checkUserExists(msg.sender), "Create an account first.");
+        require(checkUserExists(friend_key), "User is not registered!");
         require(
             checkAlreadyFriends(msg.sender, friend_key),
             "You are not friends with the given user yet!"
