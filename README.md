@@ -1,3 +1,5 @@
+![logo](https://github.com/zyanislam/chatapp/assets/89903034/dcf6ad2f-c46e-4cc8-b54f-8fed344595e4)
+
 # Blockchain-Based Chat Application using Hardhat
 
 This is a decentralized chat application built on the Ethereum blockchain using Hardhat, a development environment for Ethereum smart contracts. The application allows users to communicate with each other in a secure and private manner, leveraging the transparency and immutability of blockchain technology.
