@@ -42,15 +42,18 @@ Follow these instructions to set up and run the chat application locally on your
    ```bash
    npm install
    ```
-   or
-   
+
+4. Initiate the Hardhat Nodes to get the locally deployed accounts with Ethereum.
    ```bash
-   npm i
+   npx hardhat node
    ```
-
    
-
-5. Create a new file named `.env` in the root directory and add the following variables:
+5. Next, deploy the Smart Contract and move the JSON file (ChatApp.json) in the artifacts/contracts directory to Context directory. Use the following command to deploy the contract.
+   ```bash
+   npx hardhat run --network localhost scripts/deploy.js
+   ```
+   
+6. Create a new file named `.env` in the root directory and add the following variables:
 
    ```env
    INFURA_API_KEY=your_infura_api_key
