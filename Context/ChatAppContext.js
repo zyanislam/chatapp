@@ -45,7 +45,7 @@ export const ChatAppProvider = ({ children }) => {
             setUserLists(userList);
 
         } catch (error) {
-            setError("Please Install & Connect Your Wallet!");
+            console.log(error);
         }
     };
     useEffect(() => {
