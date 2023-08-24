@@ -113,7 +113,7 @@ const Chat = ({
               />
               {
                 loading == true ? (
-                  <Loader/>
+                  <Loader />
                 ) : (
                   <Image
                     src={images.send}
