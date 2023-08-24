@@ -86,7 +86,26 @@ const Chat = ({ functionName, readMessage, friendMsg, account, userName, loading
                 width={50}
                 height={50}
               />
-              <input type="text" placeholder="Write Your Message.." onChange={(e)=> setMessage(e.target.value)}/>
+              <input type="text" placeholder="Write Your Message.." onChange={(e) => setMessage(e.target.value)} />
+              <Image
+                src={images.file}
+                alt='file'
+                width={50}
+                height={50}
+              />
+              {
+                loading == true ? (
+                  <Loader/>
+                ) : (
+                  <Image
+                    src={images.send}
+                    alt='send'
+                    width={50}
+                    height={50}
+                    onClick={()=> functionName({msg: message, address: chatData.address})}  
+                  />
+                )
+              }
             </div>
           </div>
         ): ""}
