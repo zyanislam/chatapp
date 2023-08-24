@@ -2,7 +2,7 @@
 
 # Blockchain-Based Chat Application using Hardhat
 
-This is a decentralized chat application built on the Ethereum blockchain using Hardhat, a development environment for Ethereum smart contracts. The application allows users to communicate with each other in a secure and private manner, leveraging the transparency and immutability of blockchain technology.
+Ripples is a decentralized chat application built based on the Ethereum blockchain using Hardhat, a development environment for Ethereum smart contracts. The application allows users to communicate with each other in a secure and private manner, leveraging the transparency and immutability of blockchain technology. This is excellent for use in firms where privacy is of essential importance and needs a platform to communicate without the constant fear and worry of having their work or conversation being leaked or commercialized by entities like Meta (Facebook, WhatsApp, Instagram etc) and Google.
 
 ## Features
 
