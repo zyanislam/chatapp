@@ -40,13 +40,12 @@ export const ChatAppProvider = ({ children }) => {
             const friendLists = await contract.getMyFriendList();
             setFriendLists(friendLists);
 
-            // Get All Users List
+            // Get All Users
             const userList = await contract.getAllAppUser();
             setUserLists(userList);
 
         } catch (error) {
-            // setError("Please Install & Connect Your Wallet!");
-            console.log(error);
+            setError("Please Install & Connect Your Wallet!");
         }
     };
     useEffect(() => {
