@@ -23,7 +23,13 @@ const Card = ({ readMessage, el, i, readUser }) => {
             />
           </div>
           <div className={Style.Card_Box_right}>
-        
+            <div className={Style.Card_Box_right_middle}>
+              <h4>{el.name}</h4>
+              <small>{el.pubkey.slice(21)}..</small>
+            </div>
+            <div className={Style.Card_Box_right_end}>
+              <small>{i + 1}</small>
+            </div>
           </div>
         </div>
       </div>
