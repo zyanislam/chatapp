@@ -21,10 +21,34 @@ const Chat = ({ functionName, readMessage, friendMsg, account, userName, loading
   return (
     <div className={Style.Chat}>
       {currentUserName && currentUserAddress ? (
-        <div>
-          
+        <div className={Style.Chat_user_info}>
+          <Image
+            src={images.accountName}
+            alt='image'
+            width={70}
+            height={70}
+          />
+          <div className={Style.Chat_user_info_box}>
+            <h4>{currentUserName}</h4>
+            <p className={Style.show}>{currentUserAddress}</p>
+          </div>
         </div>
-      )}
+      ) : ("")}
+      <div className={Style.Chat_box_box}>
+        <div className={Style.Chat_box}>
+          <div className={Style.Chat_box_left}>
+            {
+              friendMsg.map((el, i) => (
+                <div>
+                  
+                </div>
+                ))
+            }
+          </div>
+          <div className={Style.Chat_box_left}>
+          </div>
+        </div>
+      </div>
     </div>
   )
 };
