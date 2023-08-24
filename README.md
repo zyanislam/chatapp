@@ -42,8 +42,15 @@ Follow these instructions to set up and run the chat application locally on your
    ```bash
    npm install
    ```
+   or
+   
+   ```bash
+   npm i
+   ```
 
-4. Create a new file named `.env` in the root directory and add the following variables:
+   
+
+5. Create a new file named `.env` in the root directory and add the following variables:
 
    ```env
    INFURA_API_KEY=your_infura_api_key
