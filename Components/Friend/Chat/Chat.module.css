@@ -1,0 +1,10 @@
+.Chat{
+    padding: 2rem;
+    background-color: #28272c;
+    border-radius: 0.5rem;
+    overflow-y: scroll;
+}
+
+.Chat_box{
+    display: grid;
+}
