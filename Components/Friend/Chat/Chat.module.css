@@ -7,4 +7,23 @@
 
 .Chat_box{
     display: grid;
+    grid-template-columns: 1fr;
+    height: 50vh;
+    width: 80%;
+    margin: 0 auto;
+    overflow-y: scroll;
+}
+
+.Chat_box_right p,
+.Chat_box_left p{
+    background-color: #a3a0f9;
+    padding: 1rem;
+    border-top-right-radius: 0.5rem;
+    border-top-left-radius: 0.5rem;
+    border-bottom-left-radius: 0.5rem;
+    position: relative;
+}
+
+.Chat_box_left_title{
+    display: flex;
 }
