@@ -79,7 +79,7 @@ export const ChatAppProvider = ({ children }) => {
     };
 
     // Add your friends
-    const addFriends = async ({name, accountAddress}) => {
+    const addFriends = async ({ name, accountAddress }) => {
         try {
             // if (name || accountAddress) return setError("Please provide the Name & Friend Address");
 
@@ -88,7 +88,7 @@ export const ChatAppProvider = ({ children }) => {
             setLoading(true);
             await addMyFriend.wait();
             setLoading(false);
-            router.push('/');
+            router.push("/");
             window.location.reload();
         } catch (error) {
             setError("Something went wrong when you tried to add friends!! Try again.");
@@ -98,7 +98,7 @@ export const ChatAppProvider = ({ children }) => {
     // Send message to your friend
     const sendMessage = async ({msg, address}) => {
         try {
-            if (msg || address) return setError("Please enter your message.");
+            // if (msg || address) return setError("Please enter your message.");
 
             const contract = await connectingWithContract();
             const addMessage = await contract.sendMessage(address, msg);
