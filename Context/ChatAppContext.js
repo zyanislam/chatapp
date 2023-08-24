@@ -117,19 +117,15 @@ export const ChatAppProvider = ({ children }) => {
         const contract = await connectingWithContract();
         const userName = await contract.getUsername(userAddress);
         setCurrentUserName(userName);
-        setCurrentUserAddress(userAddress)
-        setLoading(true);
-        await addMessage.wait();
-        setLoading(false);
-        window.location.reload();
-       
+        setCurrentUserAddress(userAddress);
     };
 
 
     return (
         <ChatAppContect.Provider value={{
             readMessage,
-            createAccount, addFriends,
+            createAccount,
+            addFriends,
             sendMessage,
             readUser,
             account,

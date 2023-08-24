@@ -1,6 +1,6 @@
 .Chat{
     padding: 2rem;
-    background-color: #28272c;
+    background-color: rgba(0, 0, 0, 0.25);
     border-radius: 0.5rem;
     overflow-y: scroll;
 }
@@ -40,7 +40,7 @@
 
 .Chat_box_send_img input{
     width: 100%;
-    background-color: #55f6c3;
+    background-color: #fffaec;
     outline: none;
     border: none;
     padding: 1rem;
