@@ -10,7 +10,7 @@ const index = () => {
             <Filter />
             <Friend />
         </div>
-    )
+    );
 };
 
-export default index
+export default index;

@@ -10,5 +10,17 @@
 }
 
 .Friend_Box_left{
-    
+    background-color: #28272c;
+    padding: 1rem;
+    border-radius: 0.75rem;
+}
+
+@media only screen and ( max-width: 35em) {
+    .Friend{
+        width: 90%;
+    }
+
+    .Filter_Box{
+        grid-template-columns: 1fr;
+    }
 }
