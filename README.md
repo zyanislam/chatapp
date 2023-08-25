@@ -69,21 +69,21 @@ Follow these instructions to set up and run the chat application locally on your
 10. Remember to reset your account everytime you change the account in Metamask extension to make sure there is no sort of error in the transaction.
     To do that:
     
-    Open up Metamask extension.
+    Open up **Metamask extension**.
     
     Go to **Seetings** > **Advanced** > **'Reset account' button**.
 
 
 ## Contributing
 
-Contributions to this project are welcome! If you find any issues or want to add new features, please open an issue or submit a pull request.
+Contributions to this project are now closed. But you can always download the repository yourself and add some cool new features.
+
 
 ## Acknowledgments
 
 - Hat tip to anyone whose code was used
-- Inspiration
-- etc.
-
+- Inspiration & etc.
+  
 ---
 
 **Important:** This project is intended for educational and demonstration purposes only. Do not use real funds or sensitive information in this development environment.
