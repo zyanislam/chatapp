@@ -52,39 +52,23 @@ Follow these instructions to set up and run the chat application locally on your
    ```bash
    npx hardhat run --network localhost scripts/deploy.js
    ```
+
+6. Lastly, to run the application and start the developement server use the following code:
+   ```bash
+   npm run dev
+   ```
    
 ### Note
-6. Create your own local network first on MetaMask wallet or else the ethereum won't be shown on your wallet after importing the accounts.
 
+7. Create your own local network first on MetaMask wallet or else the ethereum won't be shown on your wallet after importing the accounts.
 
-### Usage
+8. Visit `http://localhost:3000` in your web browser.
 
-1. Compile the smart contracts:
-   ```bash
-   npx hardhat compile
-   ```
+9. Connect your Metamask wallet to the application and start chatting with other users.
+    
+10. Remember to reset your account everytime you change the account in Metamask extension to make sure there is no sorts of error in transaction. To do that
+    Go to **Seetings** > **Advanced** > **'Reset account' button**.
 
-2. Deploy the smart contracts to your local blockchain:
-   ```bash
-   npx hardhat run scripts/deploy.js --network localhost
-   ```
-
-3. Start the development server:
-   ```bash
-   npm start
-   ```
-
-4. Visit `http://localhost:3000` in your web browser.
-
-5. Connect your Metamask wallet to the application and start chatting with other users.
-
-### Testing
-
-To run the smart contract tests, use the following command:
-
-```bash
-npx hardhat test
-```
 
 ## Contributing
 
