@@ -70,6 +70,7 @@ Follow these instructions to set up and run the chat application locally on your
     To do that:
     
     Open up Metamask extension.
+    
     Go to **Seetings** > **Advanced** > **'Reset account' button**.
 
 
