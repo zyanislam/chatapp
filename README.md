@@ -26,7 +26,7 @@ Follow these instructions to set up and run the chat application locally on your
 
 - Metamask browser extension installed. [Get Metamask](https://metamask.io/)
 
-### Installation
+## Installation
 
 1. Clone the repository:
    ```bash
@@ -53,14 +53,9 @@ Follow these instructions to set up and run the chat application locally on your
    npx hardhat run --network localhost scripts/deploy.js
    ```
    
-6. Create a new file named `.env` in the root directory and add the following variables:
+### Note
+6. Create your own local network first on MetaMask wallet or else the ethereum won't be shown on your wallet after importing the accounts.
 
-   ```env
-   INFURA_API_KEY=your_infura_api_key
-   MNEMONIC=your_metamask_mnemonic
-   ```
-
-   Note: Make sure you have funded your test Ethereum wallet with some Ether for deploying and interacting with the smart contracts.
 
 ### Usage
 
