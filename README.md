@@ -62,7 +62,7 @@ Follow these instructions to set up and run the chat application locally on your
 
 7. Create your own local network first on MetaMask wallet or else the ethereum won't be shown on your wallet after importing the accounts.
 
-8. Visit `http://localhost:3000` in your web browser.
+8. Visit [`http://localhost:3000`](http://localhost:3000) in your web browser.
 
 9. Connect your Metamask wallet to the application and start chatting with other users.
     
