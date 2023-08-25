@@ -66,7 +66,7 @@ Follow these instructions to set up and run the chat application locally on your
 
 9. Connect your Metamask wallet to the application and start chatting with other users.
     
-10. Remember to reset your account everytime you change the account in Metamask extension to make sure there is no sorts of error in transaction. To do that
+10. Remember to reset your account everytime you change the account in Metamask extension to make sure there is no sort of error in the transaction. To do that
     Go to **Seetings** > **Advanced** > **'Reset account' button**.
 
 
