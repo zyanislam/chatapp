@@ -23,9 +23,10 @@
 }
 
 .active_btn{
-    color: #a3a0f9;
-    border-bottom: 2px solid #a3a0f9;
+    color: #ffa25c;
+    border-bottom: 2px solid #ffa25c;
     padding-bottom: .4rem;
+    font-weight: 700;
 }
 
 .NavBar_Box_right_connect{

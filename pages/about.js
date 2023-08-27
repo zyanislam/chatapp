@@ -10,7 +10,7 @@ const index = () => {
             <h1 className={Style.about_h1}> Ripples !</h1>
         </div>
         <div className={Style.alluser}>
-            <h3>A Blockchain based Chat Application!</h3>
+            <h3 className={Style.about_h3}>A Blockchain based Chat Application!</h3>
                 <p className={Style.about_us}>Ripples is a decentralized chat application built based on the Ethereum blockchain using Hardhat, a development environment for Ethereum smart contracts. The application allows users to communicate with each other in a secure and private manner, leveraging the transparency and immutability of blockchain technology. This is excellent for use in firms where privacy is of essential importance and needs a platform to communicate without the constant fear and worry of having their work or conversation being leaked or commercialized by entities like <strong>Meta</strong> (Facebook, WhatsApp, Instagram etc) and <strong>Google</strong>.
                 </p>
                 <br />
