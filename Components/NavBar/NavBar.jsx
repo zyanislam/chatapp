@@ -17,12 +17,8 @@ const NavBar = () => {
             link: "/",
         },
         {
-            menu: "CONTACT",
-            link: "/",
-        },
-        {
-            menu: "FAQS",
-            link: <a href="https://github.com/zyanislam/chatapp">a</a>,
+            menu: "ABOUT RIPPLES",
+            link: "/about",
         },
   ];
   

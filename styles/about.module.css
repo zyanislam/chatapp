@@ -1,0 +1,39 @@
+.about{
+    padding: 2rem;
+    background-color: rgba(23, 23, 23, 0.728);
+    border-radius: 0.5rem;
+    overflow-y: scroll;
+}
+
+.about_info{
+    width: 80%;
+    margin: 4rem auto;
+    font-size: 1.5rem;
+}
+
+.about_h1{
+    padding-left: 20px;
+}
+
+.alluser{
+    width: 80%;
+    margin: 2rem auto;
+    background-color:rgba(19, 19, 19, 0.25);
+    min-height: 2rem;
+    padding: 2rem;
+    border-radius: 2rem;
+}
+
+.about_us{
+    font-size: 1.5rem;
+}
+
+
+.about_gitp{
+    font-size: 23px;
+}
+
+.about_git{
+    font-size: 25px;
+    color: #a3a0f9;
+}
