@@ -7,7 +7,7 @@ const index = () => {
     return (
         <div>
         <div className={Style.about_info}>
-            <h1 className={Style.about_h1}> Ripples !</h1>
+            <h1 className={Style.about_h1}> about ripples !</h1>
         </div>
         <div className={Style.alluser}>
             <h3 className={Style.about_h3}>A Blockchain based Chat Application!</h3>
