@@ -1,4 +1,4 @@
-![logo](https://github.com/zyanislam/chatapp/assets/89903034/dcf6ad2f-c46e-4cc8-b54f-8fed344595e4)
+![logo](https://github.com/zyanislam/chatapp/assets/89903034/057df948-46ef-47c5-81e3-81b517352fb0)
 
 # Blockchain-Based Chat Application using Hardhat
 
