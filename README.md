@@ -84,7 +84,7 @@ Contributions to this project are now closed. But you can always download the re
 
 ![Starting](https://github.com/zyanislam/chatapp/assets/89903034/66493616-46d8-4cff-9070-455552198904)
 
-#### Fig 1: Metamask wallet is triggered and the user is asked to enter his/her credentials to open the digital wallet.
+#### Fig 1: Metamask wallet is triggered and the user is asked to enter their credentials to open their digital wallet.
 
 <br>
 
