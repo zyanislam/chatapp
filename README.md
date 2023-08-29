@@ -76,6 +76,12 @@ Follow these instructions to set up and run the chat application locally on your
 
 Contributions to this project are now closed. But you can always download the repository yourself and add some cool new features.
 
+## Screenshots
+
+
+![2](https://github.com/zyanislam/chatapp/assets/89903034/5fe3e157-fd3e-4020-bae6-c3553a8ee990)
+
+![3](https://github.com/zyanislam/chatapp/assets/89903034/e968b604-fe9a-4292-afd9-8f7ce4d7a456)
 
 ## Acknowledgments
 
