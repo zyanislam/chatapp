@@ -6,13 +6,13 @@ Ripples is a decentralized chat application built based on the Ethereum blockcha
 
 ## Features
 
-- **Decentralized Messaging**: Messages are stored on the Ethereum blockchain, ensuring data integrity and censorship resistance (simulated using HardHat).
+- 🗼 **Decentralized Messaging**: Messages are stored on the Ethereum blockchain, ensuring data integrity and censorship resistance (simulated using HardHat).
 
-- **Secure Communication**: Messages are encrypted to maintain user privacy and security.
+- 🔒 **Secure Communication**: Messages are encrypted to maintain user privacy and security.
 
-- **Peer-to-Peer Architecture**: Direct communication between users, avoiding centralized intermediaries.
+- 🧑🏻 **Peer-to-Peer Architecture**: Direct communication between users, avoiding centralized intermediaries.
 
-- **Metamask Integration**: Users can interact with the application through the Metamask browser extension.
+- 🦊 **Metamask Integration**: Users can interact with the application through the Metamask browser extension.
 
 ## Getting Started
 
