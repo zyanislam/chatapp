@@ -56,7 +56,8 @@ Follow these instructions to set up and run the chat application locally on your
    npm run dev
    ```
    
-### Note
+### Note:
+#### You must have all the prerequisities in your local device before you can use this application. Read above to see if you have them installed or not.
 
 7. Create your own local network first on MetaMask wallet or else the ethereum won't be shown on your wallet after importing the accounts.
 
