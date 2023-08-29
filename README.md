@@ -78,8 +78,13 @@ Contributions to this project are now closed. But you can always download the re
 
 ## Screenshots
 
+![Starting](https://github.com/zyanislam/chatapp/assets/89903034/e9c2fc03-7959-46c2-9de4-0af7384b4e4d)
+
+Metamask wallet is triggered and the user is asked to enter his/her credentials to open the digital wallet.
 
 ![2](https://github.com/zyanislam/chatapp/assets/89903034/5fe3e157-fd3e-4020-bae6-c3553a8ee990)
+
+This is the Login Page where the user has to enter their name to enter the platform.
 
 ![3](https://github.com/zyanislam/chatapp/assets/89903034/e968b604-fe9a-4292-afd9-8f7ce4d7a456)
 
