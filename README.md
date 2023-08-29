@@ -1,5 +1,8 @@
 ![logo](https://github.com/zyanislam/chatapp/assets/89903034/057df948-46ef-47c5-81e3-81b517352fb0)
 
+![req](https://github.com/zyanislam/chatapp/assets/89903034/d0cbbbca-b0ba-4ef3-bca4-72372ebe9ec9)
+
+
 # Blockchain-Based Chat Application using Hardhat
 
 Ripples is a decentralized chat application built based on the Ethereum blockchain using Hardhat, a development environment for Ethereum smart contracts. The application allows users to communicate with each other in a secure and private manner, leveraging the transparency and immutability of blockchain technology. This is excellent for use in firms where privacy is of essential importance and needs a platform to communicate without the constant fear and worry of having their work or conversation being leaked or commercialized by entities like Meta (Facebook, WhatsApp, Instagram etc) and Google.
